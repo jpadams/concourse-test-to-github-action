@@ -1,15 +1,12 @@
 name: Docker Image CI
 
-on:
-  push:
-    branches:
-    - foo
+on: [push]
 
 jobs:
 
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: docker:stable-dind
 
     steps:
     - uses: actions/checkout@v1
